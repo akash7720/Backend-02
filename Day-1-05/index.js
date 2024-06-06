@@ -3,16 +3,16 @@ import  express  from "express";
 import mongoose, { Schema } from "mongoose";
 import dotenv from "dotenv";
 import { ProductSchema } from "./schemas/product.schemas.js";
-// import Joi from "joi";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import AllRoutes from "./routes/index.js"
 
-// import { valid } from "joi";
+
 const app = express();
 var corsOptions = {
-  origin : ["http://localhost:3000",
-  // "https://reactmain.vercel.app"],
+  origin : [
+    // "http://localhost:3000",
+   "https://react-02-4l1e.vercel.app/",
 ],
  credentials:true,
  };
@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(cors(corsOptions));
 
 app.get('/',(req,res)=>{
-    res.send("Working")
+    res.send("Working..")
 });
 app.use('/api/v1',AllRoutes)
 
