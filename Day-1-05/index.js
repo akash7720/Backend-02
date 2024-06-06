@@ -12,7 +12,7 @@ const app = express();
 var corsOptions = {
   origin : [
     // "http://localhost:3000",
-   "https://react-02-4l1e.vercel.app/",
+   "react-02-4l1e.vercel.app",
 ],
  credentials:true,
  };
