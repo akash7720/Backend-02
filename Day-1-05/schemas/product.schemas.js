@@ -4,7 +4,7 @@ import Joi from "joi";
 
 const productSchema = new Schema({
   name: String,
-  image:String,
+  // image:String,
   category: String,
   price: Number,
   quantity: Number,
