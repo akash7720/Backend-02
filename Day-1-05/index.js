@@ -63,6 +63,7 @@ app.post("/Joi-validate", async (req, res) => {
         price: price,
         quantity: quantity,
         tags: tags,
+        
       });
       
       await newProduct.save();
