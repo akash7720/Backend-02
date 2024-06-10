@@ -3,9 +3,9 @@ import mongoose,{Schema, model} from "mongoose";
 
 const userSchema = new Schema({
     name: String,
-   email: String,
+    email: String,
     password: String,
-    confirmPassword:String
+    confirmPassword:String,
 })
 
 const UserSchema = model("User" ,userSchema);

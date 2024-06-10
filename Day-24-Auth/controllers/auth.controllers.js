@@ -5,7 +5,7 @@ import bcrypr from 'bcrypt'
 export const Register=async(req,res)=>{
   // res.send("Register")
   try {
-    const{name , email , password ,confirmPassword} = req.body.userData;
+    const{name , email , password ,confirmPassword} = req.body;
 
     if(!name || !email|| !password || !confirmPassword){
        return res.json({
@@ -48,7 +48,7 @@ export const Register=async(req,res)=>{
 export const Login= async(req,res)=>{
     // res.send("Login.")
     try {
-      const{email , password}=req.body.userData;
+      const{email , password}=req.body;
       if(!email || !password){
        return res.json({
           success:false ,
@@ -76,6 +76,7 @@ export const Login= async(req,res)=>{
       //  console.log(isPasswordCorrect ,"isPasswordCorrect");
 
     } catch (error) {
+      console.log(error);
        return res.json({success:false , error})
     }
 };
