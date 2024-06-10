@@ -15,8 +15,9 @@ import AllRoutes from "./routes/index.js"
 // import { valid } from "joi";
 const app = express();
 var corsOptions = {
-  origin : ["http://localhost:3000",
-   "https://react-02-4l1e.vercel.app"],
+  origin : 
+  // ["http://localhost:3000",
+  [ "https://react-02-4l1e.vercel.app"],
  credentials:true,
  };
 
